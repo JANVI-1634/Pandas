@@ -1,7 +1,12 @@
 import pandas as pd
 
-# Load CSV file
-df = pd.read_csv(r"c:\Users\ADMIN\Desktop\Book1.csv")
+# Create DataFrame
+df = pd.DataFrame({
+    "Name": ["Aman", "Riya", "Karan", "Neha", "Rahul", "Simran"],
+    "Department": ["IT", "HR", "IT", "Finance", "HR", "IT"],
+    "Salary": [50000, 40000, 70000, 65000, 45000, 80000],
+    "Experience": [2, 3, 5, 4, 2, 6]
+})
 
 # Show complete data
 print("Employee Data")
@@ -32,6 +37,7 @@ dept_avg = df.groupby("Department")["Salary"].mean()
 
 print("\nDepartment Wise Average Salary")
 print(dept_avg)
+
 
 
 
